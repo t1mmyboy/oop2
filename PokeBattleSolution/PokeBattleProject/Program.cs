@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-/*
 public class Program
 {
     public static void Main()
@@ -318,37 +317,5 @@ public enum BattleResult
     Draw,
     Lose
 }
-*/
 
 
-
-
-using System;
-
-class MathOperations
-{
-    private static int result;
-
-    public static void Add(int a, int b)
-    {
-        result = a + b;
-    }
-
-    // Incorrect use of static member - accessing private static member directly
-    public static int GetResultDirectly()
-    {
-        return result;
-    }
-}
-
-class Program
-{
-    static void Main()
-    {
-        // Performing addition using the Add method
-        MathOperations.Add(5, 7);
-
-        // Incorrect use of static member - accessing the private static member directly should now cause a compilation error
-        Console.WriteLine("Result: " + MathOperations.GetResultDirectly());
-    }
-}
